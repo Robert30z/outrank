@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OUTRANK | Mercadeo digital para negocios en Puerto Rico</title>
-<meta name="description" content="Auditamos gratis la presencia digital de tu negocio y te decimos que te esta costando clientes. Paginas web, Google y automatizacion en Puerto Rico.">
+<meta name="description" content="Auditamos gratis la presencia digital de tu negocio y te decimos qué te está costando clientes. Páginas web y Google en Puerto Rico.">
 <link rel="canonical" href="https://outrank.pr/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="OUTRANK | Mercadeo digital para negocios en Puerto Rico">
-<meta property="og:description" content="Te decimos gratis que esta fallando en tu presencia digital, con datos medidos. Despues lo arreglamos.">
+<meta property="og:description" content="Te decimos gratis qué está fallando en tu presencia digital, con datos medidos. Después lo arreglamos.">
 <meta property="og:image" content="https://outrank.pr/og.png">
 <meta property="og:url" content="https://outrank.pr/">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,18 +21,20 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "OUTRANK",
-  "description": "Agencia de mercadeo digital y automatizacion para negocios pequenos en Puerto Rico.",
+  "description": "Agencia de mercadeo digital y automatización para negocios pequeños en Puerto Rico.",
   "url": "https://outrank.pr/",
   "telephone": "+1-787-454-6513",
   "email": "hola@outrank.pr",
   "priceRange": "$$",
   "areaServed": { "@type": "State", "name": "Puerto Rico" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Bayamon", "addressRegion": "PR", "addressCountry": "PR" },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "08:00", "closes": "18:00"
-  }]
+  "address": { "@type": "PostalAddress", "addressLocality": "Bayamón", "addressRegion": "PR", "addressCountry": "PR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00" }
+  ]
 }
 </script>
 
@@ -58,8 +60,9 @@ h3{font-size:20px;letter-spacing:-.02em}
 /* ---------- botones: minimo 48px de alto, se pulsan con el dedo ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
   min-height:54px;padding:15px 30px;border-radius:11px;font-size:17px;font-weight:700;
-  text-decoration:none;border:0;cursor:pointer;transition:transform .12s,background .18s;white-space:nowrap}
+  text-decoration:none;border:0;cursor:pointer;transition:transform .12s,background .18s;text-align:center}
 .btn:active{transform:translateY(1px)}
+.btn:focus-visible,.nav-l a:focus-visible,.pie a:focus-visible,.logo:focus-visible{outline:3px solid var(--ac);outline-offset:3px;border-radius:6px}
 .btn-p{background:var(--ac);color:#0A0B0D}
 .btn-p:hover{background:var(--ac2)}
 .btn-s{background:transparent;color:var(--tx);border:1.5px solid var(--lin)}
@@ -92,7 +95,7 @@ section{padding:82px 0}
 .sec-t p{color:var(--mut);margin-top:16px;font-size:18px}
 
 /* ---------- pasos ---------- */
-.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(258px,100%),1fr));gap:20px}
 .paso{background:var(--sup);border:1px solid var(--lin);border-radius:15px;padding:30px}
 .paso .n{width:40px;height:40px;border-radius:10px;background:var(--ac);color:#0A0B0D;
   display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:19px}
@@ -100,7 +103,7 @@ section{padding:82px 0}
 .paso p{color:var(--mut);font-size:16px}
 
 /* ---------- servicios ---------- */
-.serv{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:20px}
+.serv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(295px,100%),1fr));gap:20px}
 .card{background:var(--sup);border:1px solid var(--lin);border-radius:15px;padding:32px;transition:border-color .18s}
 .card:hover{border-color:#39404E}
 .card h3{margin-bottom:12px}
@@ -116,15 +119,15 @@ section{padding:82px 0}
 
 /* ---------- por que ---------- */
 .porq{background:var(--sup);border:1px solid var(--lin);border-radius:19px;padding:clamp(30px,5vw,58px)}
-.porq-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-top:38px}
+.porq-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:34px;margin-top:38px}
 .porq-g h3{margin-bottom:11px;font-size:19px}
 .porq-g p{color:var(--mut);font-size:16px}
 
 /* ---------- precios ---------- */
-.pre{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:20px}
+.pre{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(268px,100%),1fr));gap:20px}
 .p{background:var(--sup);border:1px solid var(--lin);border-radius:15px;padding:32px;display:flex;flex-direction:column}
 .p.dest{border-color:var(--ac);position:relative}
-.p.dest::before{content:'MAS PEDIDO';position:absolute;top:-11px;left:32px;background:var(--ac);color:#0A0B0D;
+.p .tag{position:absolute;top:-11px;left:32px;background:var(--ac);color:#0A0B0D;
   font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 12px;border-radius:6px}
 .p .t{font-size:15px;color:var(--mut);margin-bottom:9px}
 .p .v{font-size:37px;font-weight:800;letter-spacing:-.035em;margin-bottom:5px}
@@ -166,7 +169,7 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
   <div class="env nav">
     <a href="#top" class="logo">OUT<i>RANK</i></a>
     <nav class="nav-l">
-      <a href="#como">Como funciona</a>
+      <a href="#como">Cómo funciona</a>
       <a href="#servicios">Servicios</a>
       <a href="#precios">Precios</a>
       <a href="#contacto">Contacto</a>
@@ -182,10 +185,10 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
     <div class="eti">Mercadeo digital &middot; Puerto Rico</div>
     <h1>Tu competencia sale<br>primero. Vamos a<br><span class="ac">arreglar eso.</span></h1>
     <p class="sub">Analizamos la presencia digital de tu negocio y te entregamos un informe con
-      exactamente que esta fallando y cuanto te esta costando. Sin compromiso y sin reunion.</p>
+      exactamente qué está fallando y cuánto te está costando. Sin compromiso y sin reunión.</p>
     <div class="hero-b">
-      <a href="#contacto" class="btn btn-p">Pide tu auditoria gratis</a>
-      <a href="#como" class="btn btn-s">Ver como funciona</a>
+      <a href="#contacto" class="btn btn-p">Pide tu auditoría gratis</a>
+      <a href="#como" class="btn btn-s">Ver cómo funciona</a>
     </div>
     <p class="nota">Te la enviamos en 24 horas. No hay que pagar nada ni dar tarjeta.</p>
 
@@ -201,28 +204,28 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
   <div class="env">
     <div class="sec-t">
       <div class="eti">Como funciona</div>
-      <h2>Primero el diagnostico.<br>Despues hablamos.</h2>
-      <p>La mayoria de las agencias te venden una reunion. Nosotros te damos el diagnostico
-        completo primero, gratis, y tu decides si quieres que lo arreglemos.</p>
+      <h2>Primero el diagnóstico.<br>Después hablamos.</h2>
+      <p>La mayoría de las agencias te venden una reunión. Nosotros te damos el diagnóstico
+        completo primero, gratis, y tú decides si quieres que lo arreglemos.</p>
     </div>
     <div class="pasos">
       <div class="paso">
         <div class="n">1</div>
-        <h3>Nos das tu pagina</h3>
-        <p>Solo el enlace de tu negocio. Nada mas. Si no tienes pagina, tambien te sirve: te
-          decimos que estas perdiendo sin ella.</p>
+        <h3>Nos das tu página</h3>
+        <p>Solo el enlace de tu negocio. Nada más. Si no tienes página, también te sirve: te
+          decimos qué estás perdiendo sin ella.</p>
       </div>
       <div class="paso">
         <div class="n">2</div>
         <h3>La medimos de verdad</h3>
         <p>La abrimos en celular y en computadora y corremos 22 chequeos: si te pueden
-          llamar, si Google te encuentra, si carga rapido, como se ve al compartirla.</p>
+          llamar, si Google te encuentra, si carga rápido, cómo se ve al compartirla.</p>
       </div>
       <div class="paso">
         <div class="n">3</div>
         <h3>Recibes el informe</h3>
-        <p>Con nota, capturas reales de tu pagina, las tres cosas que hay que arreglar
-          primero y como se arregla cada una. Tuyo, lo uses con nosotros o no.</p>
+        <p>Con nota, capturas reales de tu página, las tres cosas que hay que arreglar
+          primero y cómo se arregla cada una. Tuyo, lo uses con nosotros o no.</p>
       </div>
     </div>
   </div>
@@ -233,36 +236,36 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
     <div class="sec-t">
       <div class="eti">Servicios</div>
       <h2>Lo que hacemos</h2>
-      <p>Todo esta pensado para negocios pequenos de Puerto Rico. Nada de paquetes de
-        corporacion que no vas a usar.</p>
+      <p>Todo está pensado para negocios pequeños de Puerto Rico. Nada de paquetes de
+        corporación que no vas a usar.</p>
     </div>
     <div class="serv">
       <div class="card">
-        <h3>Paginas web</h3>
-        <p>Rapidas, hechas para celular primero, y montadas para que te consigan clientes.</p>
+        <h3>Páginas web</h3>
+        <p>Rápidas, hechas para celular primero, y montadas para que te consigan clientes.</p>
         <ul>
-          <li>Boton de WhatsApp y de llamada</li>
+          <li>Botón de WhatsApp y de llamada</li>
           <li>Carga en menos de 3 segundos</li>
-          <li>Se ve bien en cualquier telefono</li>
+          <li>Se ve bien en cualquier teléfono</li>
           <li>Lista para que Google la lea</li>
         </ul>
       </div>
       <div class="card">
         <h3>Que Google te encuentre</h3>
-        <p>De nada sirve una pagina bonita que nadie ve cuando buscan tu servicio en tu pueblo.</p>
+        <p>De nada sirve una página bonita que nadie ve cuando buscan tu servicio en tu pueblo.</p>
         <ul>
           <li>Perfil de Google Business</li>
           <li>Ficha de negocio local</li>
-          <li>Resenas: como pedirlas y manejarlas</li>
-          <li>Aparecer en busquedas de tu area</li>
+          <li>Reseñas: cómo pedirlas y manejarlas</li>
+          <li>Aparecer en búsquedas de tu área</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Automatizacion</h3>
-        <p>Que tu negocio conteste a las 11 de la noche sin que tu tengas que estar despierto.</p>
+        <h3>Automatización</h3>
+        <p>Que tu negocio conteste a las 11 de la noche sin que tú tengas que estar despierto.</p>
         <ul>
-          <li>Respuesta automatica de WhatsApp</li>
-          <li>Seguimiento a quien pregunto y no volvio</li>
+          <li>Respuesta automática de WhatsApp</li>
+          <li>Seguimiento a quien preguntó y no volvió</li>
           <li>Recordatorios de cita</li>
           <li>Contenido preparado por adelantado</li>
         </ul>
@@ -272,9 +275,9 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
     <div style="margin-top:46px">
       <p style="color:var(--mut);margin-bottom:17px;font-size:16px">Trabajamos con:</p>
       <div class="ind">
-        <span>Barberias y salones</span><span>Restaurantes</span><span>Gimnasios</span>
+        <span>Barberías y salones</span><span>Restaurantes</span><span>Gimnasios</span>
         <span>Talleres</span><span>Tiendas</span><span>Servicios a domicilio</span>
-        <span>Contratistas</span><span>Clinicas y consultorios</span><span>Reposteria</span>
+        <span>Contratistas</span><span>Clinicas y consultorios</span><span>Repostería</span>
       </div>
     </div>
   </div>
@@ -283,27 +286,27 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
 <section>
   <div class="env">
     <div class="porq">
-      <div class="eti">Por que nosotros</div>
-      <h2>Te decimos que esta roto<br>antes de cobrarte nada.</h2>
+      <div class="eti">Por qué nosotros</div>
+      <h2>Te decimos qué está roto<br>antes de cobrarte nada.</h2>
       <div class="porq-g">
         <div>
           <h3>Herramientas propias</h3>
           <p>El informe que recibes no lo escribe una persona apurada: lo genera una herramienta
-            que construimos nosotros y que mide tu pagina punto por punto.</p>
+            que construimos nosotros y que mide tu página punto por punto.</p>
         </div>
         <div>
-          <h3>Numeros, no opiniones</h3>
-          <p>Cada cosa que te senalamos salio de una medicion. Si algo no se pudo medir, te lo
+          <h3>Números, no opiniones</h3>
+          <p>Cada cosa que te señalamos salió de una medición. Si algo no se pudo medir, te lo
             decimos y no cuenta. No inventamos hallazgos para venderte.</p>
         </div>
         <div>
           <h3>Precios a la vista</h3>
-          <p>Los precios estan publicados ahi abajo. No hay que pedir cotizacion ni sentarse
-            con nadie para saber cuanto cuesta.</p>
+          <p>Los precios están publicados ahí abajo. No hay que pedir cotización ni sentarse
+            con nadie para saber cuánto cuesta.</p>
         </div>
         <div>
-          <h3>De aqui</h3>
-          <p>Somos de Puerto Rico y le vendemos a negocios de Puerto Rico. Sabemos que aqui
+          <h3>De aquí</h3>
+          <p>Somos de Puerto Rico y le vendemos a negocios de Puerto Rico. Sabemos que aquí
             el cliente escribe por WhatsApp, no llena formularios largos.</p>
         </div>
       </div>
@@ -315,16 +318,16 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
   <div class="env">
     <div class="sec-t">
       <div class="eti">Precios</div>
-      <h2>Sin cotizacion, sin misterio</h2>
+      <h2>Sin cotización, sin misterio</h2>
       <p>Lo que ves es lo que es. Si tu caso no cabe en ninguno, te lo decimos de frente.</p>
     </div>
     <div class="pre">
       <div class="p">
         <div class="t">Para empezar</div>
         <div class="v">$0</div>
-        <div class="d">Auditoria completa</div>
+        <div class="d">Auditoría completa</div>
         <ul>
-          <li>22 chequeos sobre tu pagina</li>
+          <li>22 chequeos sobre tu página</li>
           <li>Capturas en celular y computadora</li>
           <li>Las 3 prioridades explicadas</li>
           <li>Tuyo, sin compromiso</li>
@@ -332,11 +335,12 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
         <a href="#contacto" class="btn btn-s">Pedirla</a>
       </div>
       <div class="p dest">
-        <div class="t">Pagina web</div>
+        <span class="tag">MÁS PEDIDO</span>
+        <div class="t">Página web</div>
         <div class="v">$800<small> &ndash; $2,500</small></div>
-        <div class="d">Pago unico, segun el tamano</div>
+        <div class="d">Pago único, según el tamaño</div>
         <ul>
-          <li>Diseno hecho para tu negocio</li>
+          <li>Diseño hecho para tu negocio</li>
           <li>WhatsApp y llamada de un toque</li>
           <li>Preparada para Google</li>
           <li>Dominio y hospedaje configurados</li>
@@ -351,7 +355,7 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
         <ul>
           <li>Cambios y mantenimiento</li>
           <li>Contenido y publicaciones</li>
-          <li>Google Business al dia</li>
+          <li>Google Business al día</li>
           <li>Automatizaciones andando</li>
           <li>Informe mensual</li>
         </ul>
@@ -359,33 +363,34 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
       </div>
     </div>
     <p style="color:var(--mut);font-size:15px;margin-top:24px">
-      Manejo de anuncios pagados: 15% de lo que inviertas, minimo $300 al mes.</p>
+      Manejo de anuncios pagados: 15% de lo que inviertas, mínimo $300 al mes.</p>
   </div>
 </section>
 
 <section id="contacto">
   <div class="env">
     <div class="cta">
-      <div class="eti" style="justify-content:center">Empieza aqui</div>
-      <h2>Vamos a ver que esta<br>fallando en tu negocio</h2>
-      <p>Dejanos el enlace de tu pagina y te mandamos el informe completo en 24 horas.
+      <div class="eti" style="justify-content:center">Empieza aquí</div>
+      <h2>Vamos a ver qué está<br>fallando en tu negocio</h2>
+      <p>Déjanos el enlace de tu página y te escribimos por WhatsApp en 24 horas.
         Gratis y sin compromiso.</p>
 
       <form class="form" action="https://formsubmit.co/hola@outrank.pr" method="POST">
-        <input type="hidden" name="_subject" value="Nueva auditoria pedida desde outrank.pr">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nueva auditoría pedida desde outrank.pr">
+        <input type="hidden" name="_next" value="https://robert30z.github.io/outrank/gracias.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label for="n">Tu nombre</label>
-        <input id="n" name="nombre" type="text" required autocomplete="name" placeholder="Como te llamas">
+        <input id="n" name="nombre" type="text" required minlength="2" autocomplete="name" placeholder="Como te llamas">
         <label for="w">WhatsApp</label>
         <input id="w" name="whatsapp" type="tel" required autocomplete="tel" placeholder="787-454-6513">
-        <label for="u">Pagina de tu negocio</label>
+        <label for="u">Página de tu negocio</label>
         <input id="u" name="pagina" type="text" required placeholder="tunegocio.com (o escribe: no tengo)">
-        <button type="submit" class="btn btn-p">Pedir mi auditoria gratis</button>
+        <button type="submit" class="btn btn-p">Pedir mi auditoría gratis</button>
       </form>
 
       <div class="o">o si prefieres</div>
       <div style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn-s" href="https://wa.me/17874546513?text=Hola%2C%20vi%20la%20pagina%20de%20OUTRANK%20y%20quiero%20mi%20auditoria%20gratis">Escribir por WhatsApp</a>
+        <a class="btn btn-s" href="https://wa.me/17874546513?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20OUTRANK%20y%20quiero%20mi%20auditor%C3%ADa%20gratis">Escribir por WhatsApp</a>
         <a class="btn btn-s" href="tel:+17874546513">Llamar</a>
       </div>
     </div>
@@ -399,20 +404,20 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
     <div class="pie">
       <div>
         <a href="#top" class="logo">OUT<i>RANK</i></a>
-        <p style="margin-top:11px;max-width:290px">Mercadeo digital y automatizacion para
-          negocios pequenos en Puerto Rico.</p>
+        <p style="margin-top:11px;max-width:290px">Mercadeo digital y automatización para
+          negocios pequeños en Puerto Rico.</p>
       </div>
       <div class="pie-c">
         <p style="color:var(--tx);font-weight:600">Contacto</p>
         <a href="https://wa.me/17874546513">WhatsApp: 787-454-6513</a>
-        <a href="tel:+17874546513">Telefono: 787-454-6513</a>
+        <a href="tel:+17874546513">Teléfono: 787-454-6513</a>
         <a href="mailto:hola@outrank.pr">hola@outrank.pr</a>
       </div>
       <div class="pie-c">
         <p style="color:var(--tx);font-weight:600">Horario</p>
         <p>Lunes a viernes: 8:00 am &ndash; 6:00 pm</p>
-        <p>Sabado: 9:00 am &ndash; 2:00 pm</p>
-        <p>Bayamon, Puerto Rico</p>
+        <p>Sábado: 9:00 am &ndash; 2:00 pm</p>
+        <p>Bayamón, Puerto Rico</p>
       </div>
     </div>
     <div class="pie-b">&copy; <span id="anio">2026</span> OUTRANK. Puerto Rico.</div>
