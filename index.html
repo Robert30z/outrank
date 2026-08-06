@@ -378,6 +378,12 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
       <form class="form" action="https://formsubmit.co/support@outrankpr.com" method="POST">
         <input type="hidden" name="_subject" value="Nueva auditoría pedida desde outrankpr.com">
         <input type="hidden" name="_next" value="https://outrankpr.com/gracias.html">
+        <!-- Sin captcha: FormSubmit lo mete por defecto y manda al que llena el
+             formulario a una pantalla suya a probar que no es robot. Eso pierde
+             leads. El campo trampa _honey de abajo ya atrapa a los bots. -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Los datos llegan en tabla, para poder leerlos del telefono -->
+        <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label for="n">Tu nombre</label>
         <input id="n" name="nombre" type="text" required minlength="2" autocomplete="name" placeholder="Como te llamas">
