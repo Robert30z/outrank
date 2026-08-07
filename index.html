@@ -378,11 +378,12 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
     <div class="cta">
       <div class="eti" style="justify-content:center">Empieza aquí</div>
       <h2>Vamos a ver qué está<br>fallando en tu negocio</h2>
-      <!-- 2026-08-07: fuera los enlaces a WhatsApp. El unico numero disponible es
-           el de Pit Stop, y su perfil de WhatsApp Business se identifica como
-           "Mecanico a domicilio". Mandar ahi a un prospecto de mercadeo lo aterriza
-           donde un taller. Vuelven cuando OUTRANK tenga numero propio. -->
-      <p>Déjanos el enlace de tu página y te contestamos por correo.
+      <!-- 2026-08-07 (2da vuelta): WhatsApp VUELVE. Se habia sacado esa tarde porque
+           el perfil del numero decia "Pit Stop / Mecanico a domicilio". Roberto lo
+           corrigio: el perfil de WhatsApp Business ya describe a OUTRANK y apunta a
+           outrankpr.com. Su razon para volver, textual: "aqui la gente escribe por
+           WhatsApp". Es el canal del pais y pelear con eso pierde leads. -->
+      <p>Déjanos el enlace de tu página y te escribimos por WhatsApp.
         Gratis y sin compromiso.</p>
 
       <form class="form" action="https://formsubmit.co/support@outrankpr.com" method="POST">
@@ -397,10 +398,12 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label for="n">Tu nombre</label>
         <input id="n" name="nombre" type="text" required minlength="2" autocomplete="name" placeholder="Como te llamas">
-        <label for="w">Teléfono</label>
-        <input id="w" name="telefono" type="tel" required autocomplete="tel" placeholder="787-000-0000">
-        <label for="e">Tu correo</label>
-        <input id="e" name="correo" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
+        <label for="w">WhatsApp</label>
+        <input id="w" name="whatsapp" type="tel" required autocomplete="tel" placeholder="787-000-0000">
+        <!-- El correo se queda pero SIN required: es la segunda via para no perder
+             un lead si el numero viene mal escrito. Obligarlo mete friccion. -->
+        <label for="e">Tu correo <span style="color:var(--mut);font-weight:400">(opcional)</span></label>
+        <input id="e" name="correo" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com">
         <label for="u">Página de tu negocio</label>
         <input id="u" name="pagina" type="text" required placeholder="tunegocio.com (o escribe: no tengo)">
         <button type="submit" class="btn btn-p">Pedir mi auditoría gratis</button>
@@ -408,7 +411,7 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
 
       <div class="o">o si prefieres</div>
       <div style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn-s" href="mailto:support@outrankpr.com?subject=Quiero%20mi%20auditor%C3%ADa%20gratis">Escribir por correo</a>
+        <a class="btn btn-s" href="https://wa.me/17874546513?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20OUTRANK%20y%20quiero%20mi%20auditor%C3%ADa%20gratis">Escribir por WhatsApp</a>
         <a class="btn btn-s" href="tel:+17874546513">Llamar</a>
       </div>
     </div>
@@ -427,6 +430,7 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
       </div>
       <div class="pie-c">
         <p style="color:var(--tx);font-weight:600">Contacto</p>
+        <a href="https://wa.me/17874546513">WhatsApp: 787-454-6513</a>
         <a href="tel:+17874546513">Teléfono: 787-454-6513</a>
         <a href="mailto:support@outrankpr.com">support@outrankpr.com</a>
       </div>
