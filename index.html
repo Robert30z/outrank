@@ -324,8 +324,13 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
   <div class="env">
     <div class="sec-t">
       <div class="eti">Precios</div>
-      <h2>Sin cotización, sin misterio</h2>
-      <p>Lo que ves es lo que es. Si tu caso no cabe en ninguno, te lo decimos de frente.</p>
+      <!-- 2026-08-07: decia "Sin cotizacion, sin misterio". Con el modelo nuevo
+           (base + lo que lo hace mas grande) SI hay que cotizar secciones y fotos,
+           asi que prometer "sin cotizacion" se contradice con la propia tabla de
+           abajo. Lo honesto es decir que el precio se sabe de entrada. -->
+      <h2>Precios claros, sin misterio</h2>
+      <p>Sabes de dónde parte antes de hablar con nadie. Si tu negocio necesita más,
+        te decimos exactamente cuánto suma y por qué.</p>
     </div>
     <div class="pre">
       <div class="p">
@@ -342,21 +347,33 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
       </div>
       <div class="p dest">
         <span class="tag">MÁS PEDIDO</span>
+        <!-- 2026-08-07: decia "$800 - $2,500". Un rango CERRADO deja fuera al de
+             $650 y al de $3,900, o sea que se anunciaba un precio que despues no se
+             cotizaba, justo el descuadre que DACO trata como enganoso. "Desde $650"
+             contiene todos los casos. El modelo real esta en PAQUETES.md: base $650
+             mas adders por seccion y por fotos. -->
         <div class="t">Página web</div>
-        <div class="v">$800<small> &ndash; $2,500</small></div>
+        <div class="v">Desde $650</div>
         <div class="d">Pago único, según el tamaño</div>
         <ul>
           <li>Diseño hecho para tu negocio</li>
           <li>WhatsApp y llamada de un toque</li>
-          <li>Preparada para Google</li>
-          <li>Dominio y hospedaje configurados</li>
-          <li>Revisiones incluidas antes de publicar</li>
+          <li>Tu ficha de Google al día</li>
+          <li>Sistema de reseñas con tarjeta</li>
+          <li>Tu WhatsApp montado para que conteste solo</li>
+          <!-- 2026-08-07: se anade "a tu nombre". El dominio lo paga el cliente
+               (~$12/ano) y va a SU nombre, y eso estaba en PAQUETES.md y en la
+               propuesta pero NO en el sitio. Callarlo hasta la propuesta es una
+               sorpresa de precio, que es justo lo que este negocio dice que no hace. -->
+          <li>Dominio y hospedaje configurados (el dominio va a tu nombre, ~$12/año)</li>
         </ul>
         <a href="#contacto" class="btn btn-p">Empezar</a>
       </div>
       <div class="p">
         <div class="t">Mensualidad</div>
-        <div class="v">$150<small> &ndash; $500/mes</small></div>
+        <!-- 2026-08-07: decia "$150 - $500". El plan Cuido es $85 y quedaba fuera
+             del rango anunciado. Ver PAQUETES.md: $85 / $250 / $500. -->
+        <div class="v">$85<small> &ndash; $500/mes</small></div>
         <div class="d">Para que no se quede parada</div>
         <ul>
           <li>Cambios y mantenimiento</li>
