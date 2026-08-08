@@ -398,8 +398,16 @@ footer{border-top:1px solid var(--lin);padding:46px 0 34px;margin-top:24px}
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label for="n">Tu nombre</label>
         <input id="n" name="nombre" type="text" required minlength="2" autocomplete="name" placeholder="Como te llamas">
+        <!-- 2026-08-07: type="tel" NO valida nada por si solo, acepta hasta una
+             letra suelta. El patron exige 10 digitos de verdad (permitiendo
+             espacios, guiones, parentesis y +). Sin esto se podia mandar "x" como
+             WhatsApp, dejar el correo vacio, y quedaba un lead IMPOSIBLE de
+             contestar mientras gracias.html le prometia que se le iba a escribir. -->
         <label for="w">WhatsApp</label>
-        <input id="w" name="whatsapp" type="tel" required autocomplete="tel" placeholder="787-000-0000">
+        <input id="w" name="whatsapp" type="tel" required autocomplete="tel"
+               pattern="(?=(?:\D*\d){10,})[\d\s\(\)\+\-]+"
+               title="Escribe tu numero con area, por ejemplo 787-000-0000"
+               placeholder="787-000-0000">
         <!-- El correo se queda pero SIN required: es la segunda via para no perder
              un lead si el numero viene mal escrito. Obligarlo mete friccion. -->
         <label for="e">Tu correo <span style="color:var(--mut);font-weight:400">(opcional)</span></label>
